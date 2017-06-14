@@ -5,10 +5,11 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
   font: 18px/1.5 San Fransisco, Helvetica Neue, sans-serif, Arial;
-  overflow-y: hidden;
+
 }
 * { box-sizing: inherit; }
 
@@ -77,8 +78,7 @@ footer {
 }
 
 .container {
-  padding: 1em;
-  overflow-y: scroll;
+  padding: 2em;
 }
 .active + .container {
   filter: blur(20px);
@@ -88,7 +88,7 @@ footer {
 
 .stop {
   z-index: 5;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -98,7 +98,7 @@ footer {
   overflow: scroll;
   display: none;
   height: 100%;
-  padding: 15% 1em 20%;
+  padding: 10em 1em 20%;
   background: rgba(255, 255, 255, .3);
 }
 .stop.active {
@@ -124,4 +124,15 @@ footer {
 }
 .error.active {
   display: block;
+}
+
+.stop .sign {
+  transform: rotate(48deg) scale(.7) translate(0%, 21%);
+  position: absolute;
+  top: -50px;
+
+}
+
+.stop h2 {
+  text-align: center;
 }

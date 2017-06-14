@@ -23,12 +23,18 @@
   }
 
   function displayResult() {
-    document.querySelector('.stop').classList.add('active')
+    var stop = document.querySelector('.stop')
+    stop.classList.add('active')
     txt.value = 'Не делай так больше, пожалуйста'
+    var img = document.createElement('img')
+    img.src = './stop.png'
+    img.classList.add('sign')
+    stop.insertBefore(img, stop.children[0])
   }
 
   function displayError() {
-    document.querySelector('.error').classList.add('active')
+    var err = document.querySelector('.error')
+    err.classList.add('active')
   }
 
   function hideEverything() {
